@@ -2,21 +2,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css"/>
     <title>Eugene's Portfolio</title>
 </head>
-<body class="opensans">
+<body class="roboto">
     <!-- Intro Section -->
-    <nav class="bg-white w-full z-10 h-small-10">
+    <nav class="bg-slate-100 w-full z-10 h-small-10">
         <div class="container mx-auto py-5 flex items-center justify-between">
             <!-- Logo -->
             <div class="flex items-center gap-3">
               <!-- <img src="./assets/logo-graphic.png" alt="Website Logo" class="w-24 h-20"> -->
-              <span class="text-2xl ml-3 md:ml-0 font-bold text-sky-900">Eugene Tang</span>
+              <span class="text-2xl ml-3 md:ml-0 font-semiboldtext-black">Eugene Tang</span>
             </div>
             <!-- Menu -->
-            <ul class="hidden md:flex space-x-10 text-gray-600 font-bold text-base">
+            <ul class="hidden md:flex space-x-10 text-black font-semi-bold text-base">
                 <li class="hover:text-gray-500">
                     <a href="#">Homepage</a>
                 </li>
@@ -36,13 +36,15 @@
             <!-- Toggle between light and dark modes -->
             <img src="./assets/dark-mode.png" class="w-8 cursor-pointer hidden md:block" alt="Dark mode">
             <!-- Hamburger Menu-->
-            <div id="hamburger-menu" class="space-y-1 mr-3 md:mr-0 md:hidden cursor-pointer z-30">
-                <div class="w-6 h-0.5 bg-black"></div>
-                <div class="w-6 h-0.5 bg-black"></div>
-                <div class="w-6 h-0.5 bg-black"></div>
+            <div id="hamburger-menu" class="space-y-1 mr-5 md:mr-0 md:hidden cursor-pointer z-30">
+                <div class="w-8 h-1 bg-black rounded-sm hamburger-menu-lines"></div>
+                <div class="w-8 h-1 bg-black rounded-sm hamburger-menu-lines"></div>
+                <div class="w-8 h-1 bg-black rounded-sm hamburger-menu-lines"></div>
             </div>
+
+        
             <!-- Items within hamburger menu -->
-            <ul id="hamburger-menu-items" class="hidden bg-indigo-900 absolute left-0 top-0 w-full h-full p-10 space-y-10 text-white text-center z-20">
+            <ul id="hamburger-menu-items" class="hidden bg-gray-900 absolute left-0 top-0 w-full h-full pt-20 pl-10 space-y-10 text-white font-semibold z-20 text-2xl">
                 <li>
                     <a href="#">Homepage</a>
                 </li>
@@ -62,20 +64,20 @@
         </div>
 
     </nav>
-    <div class="h-large-90 bg-gradient-to-t from-blue-200 to-white relative overflow-hidden flex flex-col items-center justify-center">
+    <div class="h-large-90 bg-slate-100 relative overflow-hidden flex flex-col items-center justify-center">
         <!-- Intro content -->
             <!-- Normal Text-->
-            <h1 class="text-gray-600 text-3xl sm:text-4xl md:text-7xl">Hi, I am Eugene!</h1>
+            <h1 class="text-black font-semibold text-3xl sm:text-4xl md:text-7xl">Hi, I am Eugene!</h1>
             
             <!-- Animated Text -->
             <div class="mt-10 md:mt-20">
-                <p class="text-gray-600 text-2xl sm:text-2xl md:text-6xl">An aspiring <span id="text" class="text-sky-700"></span></p>  
+                <p class="text-2xl sm:text-2xl md:text-6xl">An aspiring <span id="text" class="text-blue-600"></span></p>  
             </div>
   
         </div>
     
     <div>
-        <h1>Hello</h1>
+        <h1 class="text-blue-300">Hello</h1>
     </div>
     <!-- Javascript files -->
     <script src="./app.js"></script>
