@@ -13,7 +13,7 @@
             <!-- Logo -->
             <div class="flex items-center gap-3">
               <!-- <img src="./assets/logo-graphic.png" alt="Website Logo" class="w-24 h-20"> -->
-              <span class="text-2xl ml-3 md:ml-0 font-semiboldtext-black">Eugene Tang</span>
+              <span class="text-xl ml-5 md:ml-10 font-semibold text-black">Eugene Tang</span>
             </div>
             <!-- Menu -->
             <ul class="hidden md:flex space-x-10 text-black font-semi-bold text-base">
@@ -34,21 +34,17 @@
                 </li>
             </ul>
             <!-- Toggle between light and dark modes -->
-            <img src="./assets/dark-mode.png" class="w-8 cursor-pointer hidden md:block" alt="Dark mode">
-            <!-- Hamburger Menu-->
-            <!-- <div id="hamburger-menu" class="space-y-1 mr-5 md:mr-0 md:hidden cursor-pointer z-30">
-                <div class="w-8 h-1 bg-black rounded-sm hamburger-menu-lines"></div>
-                <div class="w-8 h-1 bg-black rounded-sm hamburger-menu-lines"></div>
-                <div class="w-8 h-1 bg-black rounded-sm hamburger-menu-lines"></div>
-            </div> -->
+            <img src="./assets/dark-mode.png" class="w-8 cursor-pointer hidden md:block md: mr-10" alt="Dark mode">
+
+
             <div id="hamburger-icon" class="space-y-1 mr-5 md:mr-0 md:hidden cursor-pointer z-30 text-[40px]">
-                <ion-icon name="menu" onclick="Open(this)"></ion-icon>
+                <ion-icon name="menu" onclick="openMenu()"></ion-icon>
             </div>
 
         
             <!-- Items within hamburger menu -->
-            <div id="hamburger-menu-items" class="flex flex-col justify-center items-center bg-gray-900 absolute left-0 top-0 w-0 h-full text-white font-semibold z-20 text-2xl duration-500 text-center">
-                <ul id="hamburger-menu-ul" class="space-y-10 mr-96">
+            <div id="hamburger-menu-items" class="flex flex-col justify-center items-center bg-gray-900 absolute left-0 top-0 w-0 h-full text-white font-semibold z-20 text-2xl duration-500 text-center overflow-hidden">
+                <ul id="hamburger-menu-ul" class="space-y-10">
                     <li class="hover:text-blue-400 duration-400">
                         <a href="#" class="hover:text-blue-400 duration-400">Homepage</a>
                     </li>
@@ -68,8 +64,8 @@
             </div>
 
             <!-- Close button -->
-            <div id="close-icon" class="hidden space-y-1 mr-5 md:mr-0 md:hidden cursor-pointer z-30 text-[40px]">
-                <ion-icon name="close" onclick="Close()"></ion-icon>
+            <div id="close-icon" class="hidden space-y-1 mr-5 md:mr-0 md:hidden cursor-pointer z-30 text-[40px] text-white">
+                <ion-icon name="close" onclick="closeMenu()"></ion-icon>
             </div>
 
 
@@ -79,11 +75,11 @@
     <div class="h-large-90 bg-slate-100 relative overflow-hidden flex flex-col items-center justify-center">
         <!-- Intro content -->
             <!-- Normal Text-->
-            <h1 class="text-black font-semibold text-3xl sm:text-4xl md:text-7xl">Hi, I am Eugene!</h1>
+            <h1 class="text-black font-semibold text-3xl sm:text-4xl md:text-6xl">Hi, I am Eugene!</h1>
             
             <!-- Animated Text -->
             <div class="mt-10 md:mt-20">
-                <p class="text-2xl sm:text-2xl md:text-6xl">An aspiring <span id="text" class="text-blue-600"></span></p>  
+                <p class="text-2xl sm:text-2xl md:text-5xl">An aspiring <span id="text" class="text-blue-600"></span></p>  
             </div>
   
         </div>

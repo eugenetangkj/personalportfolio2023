@@ -6,23 +6,23 @@ const hamburgerMenuList = document.querySelector("#hamburger-menu-ul");
 
 
 
-function Open() {
+function openMenu() {
     hamburgerIcon.classList.toggle("hidden");
     closeIcon.classList.toggle("hidden");
     hamburgerMenuItems.classList.add('w-[100%]');
     hamburgerMenuItems.classList.remove('w-0');
-    hamburgerMenuList.classList.remove('mr-96');
+    // hamburgerMenuList.classList.remove('mr-96');
 
 
 
 }
 
-function Close() {
+function closeMenu() {
     hamburgerIcon.classList.toggle("hidden");
     closeIcon.classList.toggle("hidden");
     hamburgerMenuItems.classList.add('w-0');
     hamburgerMenuItems.classList.remove('w-[100%]');
-    hamburgerMenuList.classList.add('mr-96');
+    // hamburgerMenuList.classList.add('mr-96');
 
 
 }
