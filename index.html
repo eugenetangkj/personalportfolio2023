@@ -36,31 +36,43 @@
             <!-- Toggle between light and dark modes -->
             <img src="./assets/dark-mode.png" class="w-8 cursor-pointer hidden md:block" alt="Dark mode">
             <!-- Hamburger Menu-->
-            <div id="hamburger-menu" class="space-y-1 mr-5 md:mr-0 md:hidden cursor-pointer z-30">
+            <!-- <div id="hamburger-menu" class="space-y-1 mr-5 md:mr-0 md:hidden cursor-pointer z-30">
                 <div class="w-8 h-1 bg-black rounded-sm hamburger-menu-lines"></div>
                 <div class="w-8 h-1 bg-black rounded-sm hamburger-menu-lines"></div>
                 <div class="w-8 h-1 bg-black rounded-sm hamburger-menu-lines"></div>
+            </div> -->
+            <div id="hamburger-icon" class="space-y-1 mr-5 md:mr-0 md:hidden cursor-pointer z-30 text-[40px]">
+                <ion-icon name="menu" onclick="Open(this)"></ion-icon>
             </div>
 
         
             <!-- Items within hamburger menu -->
-            <ul id="hamburger-menu-items" class="hidden bg-gray-900 absolute left-0 top-0 w-full h-full pt-20 pl-10 space-y-10 text-white font-semibold z-20 text-2xl">
-                <li>
-                    <a href="#">Homepage</a>
-                </li>
-                <li>
-                    <a href="#">About Me</a>
-                </li>
-                <li>
-                    <a href="#">Skills</a>
-                </li>
-                <li>
-                    <a href="#">Projects</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
+            <div id="hamburger-menu-items" class="flex flex-col justify-center items-center bg-gray-900 absolute left-0 top-0 w-0 h-full text-white font-semibold z-20 text-2xl duration-500 text-center">
+                <ul id="hamburger-menu-ul" class="space-y-10 mr-96">
+                    <li class="hover:text-blue-400 duration-400">
+                        <a href="#" class="hover:text-blue-400 duration-400">Homepage</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-blue-400 duration-400">About Me</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-blue-400 duration-400">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-blue-400 duration-400">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-blue-400 duration-400">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Close button -->
+            <div id="close-icon" class="hidden space-y-1 mr-5 md:mr-0 md:hidden cursor-pointer z-30 text-[40px]">
+                <ion-icon name="close" onclick="Close()"></ion-icon>
+            </div>
+
+
         </div>
 
     </nav>
@@ -82,5 +94,6 @@
     <!-- Javascript files -->
     <script src="./app.js"></script>
     <script src="./autotyping.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
 </html>
