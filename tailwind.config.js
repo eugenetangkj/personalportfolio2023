@@ -15,6 +15,7 @@ module.exports = {
       spacing: {
         "big": "48rem",
         "small-10": "10%",
+        "small-12.5": "12.5%",
         "large-90": "90%",
       }
     },
