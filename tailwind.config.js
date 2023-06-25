@@ -17,6 +17,7 @@ module.exports = {
         "small-10": "10%",
         "small-12.5": "12.5%",
         "large-90": "90%",
+        "large-125": "125%",
       }
     },
     fontFamily: {
