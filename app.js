@@ -4,7 +4,9 @@ const closeIcon = document.querySelector("#close-icon");
 const hamburgerMenuItems = document.querySelector("#hamburger-menu-items");
 const hamburgerMenuList = document.querySelector("#hamburger-menu-ul");
 const bodyElement = document.getElementsByTagName("BODY")[0];
-
+const htmlElement = document.getElementsByTagName("HTML")[0];
+const moonIcon = document.getElementById("moon-icon");
+const moonIconMenu = document.getElementById("moon-icon-menu");
 //Runs when hamburger menu is pressed on
 function openMenu() {
     hamburgerIcon.classList.toggle("hidden");
@@ -23,9 +25,16 @@ function closeMenu() {
     bodyElement.classList.remove('overflow-hidden');
 }
 
-window.onscroll = function() {
-  scroll();
-};
+//Runs to toggle dark and light modes
+moonIcon.addEventListener("click", () =>
+  htmlElement.classList.toggle("dark")
+);
+//Runs to toggle dark and light modes
+moonIconMenu.addEventListener("click", () =>
+  htmlElement.classList.toggle("dark")
+);
+
+
 
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
 var prevScrollpos = window.pageYOffset;
@@ -39,32 +48,5 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 
-// let slideIndex = 1;
-// showSlides(slideIndex);
 
-// // Next/previous controls
-// function plusSlides(n) {
-//   showSlides(slideIndex += n);
-// }
-
-// // Thumbnail image controls
-// function currentSlide(n) {
-//   showSlides(slideIndex = n);
-// }
-
-// function showSlides(n) {
-//   let i;
-//   let slides = document.getElementsByClassName("mySlides");
-//   let dots = document.getElementsByClassName("dot");
-//   if (n > slides.length) {slideIndex = 1}
-//   if (n < 1) {slideIndex = slides.length}
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-//   for (i = 0; i < dots.length; i++) {
-//     dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//   slides[slideIndex-1].style.display = "block";
-//   dots[slideIndex-1].className += " active";
-// }
 

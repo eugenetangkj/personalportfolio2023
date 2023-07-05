@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,72 +7,67 @@
     <link rel="stylesheet" href="./css/customstyle.css"/>
     <title>Eugene's Portfolio</title>
 </head> 
-<body class="roboto">
+<body class="roboto dark:bg-slate-950">
     <!-- Nav bar -->
-    <nav class="bg-slate-100 w-full z-10 h-small-10 fixed duration-500" id="navbar">
-        <div class="container mx-auto py-5 flex items-center justify-between">
+    <nav class="bg-slate-100 w-full z-10 h-small-10 fixed duration-500 dark:bg-gray-900" id="navbar">
+        <div class="mx-5 md:container md:mx-auto md:w-large-90 py-5 flex items-center justify-between">
             <!-- Logo -->
-            <div class="flex items-center gap-3">
-              <!-- <img src="./assets/logo-graphic.png" alt="Website Logo" class="w-24 h-20"> -->
-              <span class="text-xl ml-5 md:ml-10 font-semibold text-black">Eugene Tang</span>
-            </div>
+            <span class="text-xl font-semibold text-black dark:text-white">Eugene Tang</span>
 
             <!-- Main Menu -->
-            <ul class="hidden md:flex space-x-10 text-black font-semi-bold text-base">
-                <li class="hover:text-gray-500">
-                    <a href="#">Homepage</a>
+            <ul class="hidden md:flex md:justify-center text-black dark:text-white font-semi-bold text-base">
+                <li class="hover:text-gray-500 dark:hover:text-gray-300 mx-5">
+                    <a href="#home-section" class="duration-200">Home</a>
                 </li>
-                <li class="hover:text-gray-500">
-                    <a href="#">About Me</a>
+                <li class="hover:text-gray-500 dark:hover:text-gray-300 mx-5">
+                    <a href="#about-me-section">About Me</a>
                 </li>
-                <li class="hover:text-gray-500">
-                    <a href="#">Skills</a>
+                <li class="hover:text-gray-500 dark:hover:text-gray-300 mx-5">
+                    <a href="#experience-section">Experience</a>
                 </li>
-                <li class="hover:text-gray-500">
-                    <a href="#">Experience</a>
+                <li class="hover:text-gray-500 dark:hover:text-gray-300 mx-5">
+                    <a href="#projects-section">Projects</a>
                 </li>
-                <li class="hover:text-gray-500">
-                    <a href="#">Projects</a>
-                </li>
-                <li class="hover:text-gray-500">
-                    <a href="#">Contact</a>
+                <li class="hover:text-gray-500 dark:hover:text-gray-300 mx-5">
+                    <a href="#contact-section">Contact</a>
                 </li>
             </ul>
 
             <!-- Toggle between light and dark modes -->
-            <img src="./assets/dark-mode.png" class="w-8 cursor-pointer hidden md:block md: mr-10" alt="Dark mode">
+            <ion-icon id="moon-icon" name="moon-outline" class="text-[30px] text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 hidden md:block cursor-pointer dark:text-blue-400"></ion-icon>
+            <!-- <img src="./assets/dark-mode.png" class="w-8 cursor-pointer hidden md:block md: mr-10" alt="Dark mode"> -->
+            <!-- <ion-icon name="game-controller-outline" class="text-[40px] text-gray-400"></ion-icon> -->
 
             <!-- Hamburger Menu-->
-            <div id="hamburger-icon" class="space-y-1 mr-5 md:mr-0 md:hidden cursor-pointer z-30 text-[40px]">
+            <div id="hamburger-icon" class="mx-auto space-y-1 mr-5 md:mr-0 md:hidden cursor-pointer z-30 text-[40px] dark:text-white">
                 <ion-icon name="menu" onclick="openMenu()"></ion-icon>
             </div>
 
             <!-- Items within hamburger menu -->
-            <div id="hamburger-menu-items" class="flex flex-col justify-center items-center bg-gray-900 absolute left-0 top-0 w-0 h-[100vh] text-white font-semibold z-20 text-2xl duration-500 text-center overflow-hidden">
+            <div id="hamburger-menu-items" class="flex flex-col justify-center items-center bg-slate-200 dark:bg-black absolute left-0 top-0 w-0 h-[100vh] text-black dark:text-white font-semibold z-20 text-2xl duration-500 text-center overflow-hidden">
                 <ul id="hamburger-menu-ul" class="space-y-10">
                     <li class="hover:text-blue-400 duration-400">
-                        <a href="#" class="hover:text-blue-400 duration-500">Homepage</a>
+                        <a href="#home-section" onclick="closeMenu()" class="hover:text-blue-600 dark:hover:text-blue-400 duration-500">Home</a>
                     </li>
                     <li>
-                        <a href="#" class="hover:text-blue-400 duration-500">About Me</a>
+                        <a href="#about-me-section" onclick="closeMenu()" class="hover:text-blue-600 dark:hover:text-blue-400 duration-500">About Me</a>
                     </li>
                     <li>
-                        <a href="#" class="hover:text-blue-400 duration-500">Skills</a>
+                        <a href="#experience-section" onclick="closeMenu()" class="hover:text-blue-600 dark:hover:text-blue-400 duration-500">Experience</a>
                     </li>
                     <li>
-                        <a href="#" class="hover:text-blue-400 duration-500">Experience</a>
+                        <a href="#projects-section" onclick="closeMenu()" class="hover:text-blue-600 dark:hover:text-blue-400 duration-500">Projects</a>
                     </li>
                     <li>
-                        <a href="#" class="hover:text-blue-400 duration-500">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:text-blue-400 duration-500">Contact</a>
+                        <a href="#contact-section" onclick="closeMenu()" class="hover:text-blue-600 dark:hover:text-blue-400 duration-500">Contact</a>
                     </li>
                 </ul>
+
+                <ion-icon id="moon-icon-menu" name="moon-outline" class="text-[40px] text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 dark:text-white  cursor-pointer mt-20"></ion-icon>
             </div>
 
             <!-- Close button -->
-            <div id="close-icon" class="hidden space-y-1 mr-5 md:mr-0 md:hidden cursor-pointer z-30 text-[40px] text-white">
+            <div id="close-icon" class="hidden space-y-1 mr-5 md:mr-0 md:hidden cursor-pointer z-30 text-[40px] text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400">
                 <ion-icon name="close" onclick="closeMenu()"></ion-icon>
             </div>
         </div>
@@ -80,24 +75,24 @@
     </nav>
 
     <!-- Intro section-->
-    <div class="bg-slate-100 relative overflow-hidden flex flex-col items-center justify-center" style="height: 100vh">
+    <div id="home-section" class="bg-slate-100 dark:bg-gray-900 flex flex-col items-center justify-center mx-auto" style="height: 100vh">
         <!-- Normal Text-->
-        <h1 class="text-black font-semibold text-3xl sm:text-4xl md:text-6xl">Hi, I am Eugene!</h1>
+        <h1 class="text-black dark:text-white font-semibold text-3xl sm:text-4xl md:text-6xl mx-auto">Hi, I am Eugene!</h1>
             
         <!-- Animated Text -->
-        <div class="mt-10 md:mt-20">
-            <p class="text-2xl sm:text-2xl md:text-5xl">An aspiring <span id="text" class="text-blue-600"></span></p>  
+        <div class="mt-10 md:mt-20 mx-auto">
+            <p class="text-2xl sm:text-2xl md:text-5xl mx-auto dark:text-white">An aspiring <span id="text" class="text-blue-600 dark:text-blue-400"></span></p>  
         </div>
     </div>
     
 
     <!-- About Me section -->
-    <div class="container w-3/4 mx-auto flex flex-col py-16 md:py-20 space-y-20 justify-center items-center">
+    <div id="about-me-section" class="container w-3/4 mx-auto flex flex-col py-16 md:py-20 space-y-20 justify-center items-center dark:bg-slate-950">
         <!-- About Me Information-->
         <div class="flex flex-col gap-4 justify-center items-center">
-            <h1 class="font-semibold text-blue-600 text-2xl text-center">About Me</h1>
-            <h1 class="font-semibold text-3xl md:text-4xl text-center">I build user-centric, visually-appealing digital products.</h1>
-            <p class="text-md md:text-xl mt-5 text-center">Greetings! I'm Eugene, a second-year undergraduate studying Computer Science at the National University of Singapore. As an aspiring software engineer, I am driven by my genuine passion for creating user-centric products. With a strong belief in the significance of user experience, I am committed to delivering exceptional digital experiences.
+            <h1 class="font-semibold text-blue-600 dark:text-blue-400 text-2xl text-center">About Me</h1>
+            <h1 class="font-semibold text-3xl md:text-4xl text-center dark:text-white">I build user-centric, visually-appealing digital products.</h1>
+            <p class="text-md md:text-xl mt-5 text-center dark:text-white">Greetings! I'm Eugene, a second-year undergraduate studying Computer Science at the National University of Singapore. As an aspiring software engineer, I am driven by my genuine passion for creating user-centric products. With a strong belief in the significance of user experience, I am committed to delivering exceptional digital experiences.
             </p> 
         </div>
 
@@ -176,27 +171,27 @@
     <!-- </div> -->
 
     <!-- Work Experience section -->
-    <div class="container w-3/4 mx-auto flex flex-col py-16 md:py-20 space-y-20 justify-center items-center">
+    <div id="experience-section" class="container w-3/4 mx-auto flex flex-col py-16 md:py-20 space-y-20 justify-center items-center">
         <!-- Work Experience header -->
         <div class="flex flex-col gap-4 justify-center items-center">
-            <h1 class="font-semibold text-blue-600 text-2xl text-center">Experience</h1>
-            <h1 class="font-semibold text-3xl md:text-4xl text-center">I put my skills and knowledge into practice.</h1>
+            <h1 class="font-semibold text-blue-600 dark:text-blue-400 text-2xl text-center">Experience</h1>
+            <h1 class="font-semibold text-3xl md:text-4xl text-center dark:text-white">I put my skills and knowledge into practice.</h1>
         </div>
 
         <!-- CBM Software Engineer Intern -->
         <div class="flex flex-col gap-4 justify-center items-start w-full lg:w-3/4">
-            <h3 class="text-gray-400 text-lg text-left">May 2023 - Present </h3>
-            <h3 class="font-semibold text-3xl md:text-2xl text-left">Software Engineer Intern @ CBM Pte Ltd</h3>
-            <h4 class="text-blue-600 text-left">Flutter, PHP Laravel, HTML, CSS, Javascript, jQuery, Figma</h4>
-            <p class="text-md md:text-lg mt-2 text-left">I was responsible for building a full stack project management system. I designed a hi-fidelity prototype of the front-end mobile application via Figma and coded it using Flutter. Also, I assisted in the development of the web admin dashboard using the PHP Laravel framework, and HTML/CSS/Javascript/jQuery for custom web pages.</p> 
+            <h3 class="text-gray-400 dark:text-gray-100 text-lg text-left">May 2023 - Present </h3>
+            <h3 class="font-semibold text-3xl md:text-2xl text-left dark:text-white">Software Engineer Intern @ CBM Pte Ltd</h3>
+            <h4 class="text-blue-600 dark:text-blue-400 text-left">Flutter, PHP Laravel, HTML, CSS, Javascript, jQuery, Figma</h4>
+            <p class="text-md md:text-lg mt-2 text-left dark:text-white">I was responsible for building a full stack project management system. I designed a hi-fidelity prototype of the front-end mobile application via Figma and coded it using Flutter. Also, I assisted in the development of the web admin dashboard using the PHP Laravel framework, and HTML/CSS/Javascript/jQuery for custom web pages.</p> 
         </div>
 
         <!-- Orbital Adviser -->
         <div class="flex flex-col gap-4 justify-center items-start w-full lg:w-3/4">
-            <h3 class="text-gray-400 text-lg text-left">May 2023 - Present </h3>
-            <h3 class="font-semibold text-3xl md:text-2xl text-left">Advisor for NUS CP2106 (Orbital)</h3>
-            <h4 class="text-blue-600 text-left">Unity, Software Engineering</h4>
-            <p class="text-md md:text-lg mt-2 text-left">I provided guidance and technical know-how to 11 teams of Year 1 undergraduates during their journey on a 3-month long software engineering project. My primary areas of focus were Unity and software engineering principles, such as proper version control and software design.</p> 
+            <h3 class="text-gray-400 dark:text-gray-100 text-lg text-left">May 2023 - Present </h3>
+            <h3 class="font-semibold text-3xl md:text-2xl text-left dark:text-white">Advisor for NUS CP2106 (Orbital)</h3>
+            <h4 class="text-blue-600 dark:text-blue-400 text-left">Unity, Software Engineering</h4>
+            <p class="text-md md:text-lg mt-2 text-left dark:text-white">I provided guidance and technical know-how to 11 teams of Year 1 undergraduates during their journey on a 3-month long software engineering project. My primary areas of focus were Unity and software engineering principles, such as proper version control and software design.</p> 
         </div>
 
 
@@ -205,11 +200,11 @@
     </div>
 
     <!-- Projects section -->
-    <div class="w-full lg:container lg:mx-auto flex flex-col py-16 md:py-20 space-y-20 justify-center items-center">
+    <div id="projects-section" class="w-full lg:container lg:mx-auto flex flex-col py-16 md:py-20 space-y-20 justify-center items-center">
         <!-- Projects Information-->
         <div class="flex flex-col gap-4 justify-center items-center">
-            <h1 class="font-semibold text-blue-600 text-2xl text-center">Projects</h1>
-            <h1 class="font-semibold w-3/4 md:w-full text-3xl md:text-4xl text-center">Designed with perfection in mind.</h1>
+            <h1 class="font-semibold text-blue-600 dark:text-blue-400 text-2xl text-center">Projects</h1>
+            <h1 class="font-semibold w-3/4 md:w-full text-3xl md:text-4xl text-center dark:text-white">Designed with perfection in mind.</h1>
         </div>
 
         <!-- Featured Projects -->
@@ -223,16 +218,16 @@
 
             <!-- Project Information--> 
             <div class="flex flex-col items-center lg:items-start justify-center text-center lg:text-start lg:justify-start gap-6 lg:w-4/5 lg:col-span-6">
-                <h2 class="font-semibold mt-16 lg:mt-0 text-4xl md:text-5xl">Shooting Portals</h2>
-                <h2 class="text-xl text-center lg:text-start w-3/4 md:w-4/5 lg:w-full md:text-2xl lg-text-2xl">Embark on a multi-galaxy journey, and survive using portal technology.</h2>
-                <h4 class="text-blue-600 md:text-xl lg:text-start">Unity, Microsoft Azure Playfab</h4>
-                <p class="text-md w-5/6 lg:w-full md:text-lg mt-2 text-center lg:text-left">Shooting Portals is a PC 2D puzzle-based platformer designed for youths in the age range of 13-25. The game revolves around Pulse, an inventor residing in the Portal Galaxy. His dog, Orbit, accidentally entered into an unknown galaxy. Hence, it is up to you to rescue Orbit. Utilise Pulse's portal-based mechanics to your advantage, and survive through 10 levels filled with menacing beasts.</p>
+                <h2 class="font-semibold mt-16 lg:mt-0 text-4xl md:text-5xl dark:text-white">Shooting Portals</h2>
+                <h2 class="text-xl text-center lg:text-start w-3/4 md:w-4/5 lg:w-full md:text-2xl lg-text-2xl dark:text-white">Embark on a multi-galaxy journey, and survive using portal technology.</h2>
+                <h4 class="text-blue-600 md:text-xl lg:text-start dark:text-blue-400">Unity, Microsoft Azure Playfab</h4>
+                <p class="text-md w-5/6 lg:w-full md:text-lg mt-2 text-center lg:text-left dark:text-white">Shooting Portals is a PC 2D puzzle-based platformer designed for youths in the age range of 13-25. The game revolves around Pulse, an inventor residing in the Portal Galaxy. His dog, Orbit, accidentally entered into an unknown galaxy. Hence, it is up to you to rescue Orbit. Utilise Pulse's portal-based mechanics to your advantage, and survive through 10 levels filled with menacing beasts.</p>
                 <div class="flex flex-col items-center md:flex-row md:items-start justify-center lg:justify-start space-x-5 sm:w-3/4 md:w-auto mt-5">
-                    <button onclick="window.open('https://play.unity.com/mg/other/webgl-builds-200053','_blank')" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 px-8 rounded-full w-1/2 md:w-full">Play Game</button>
+                    <button onclick="window.open('https://play.unity.com/mg/other/webgl-builds-200053','_blank')" class="bg-blue-600 dark:bg-blue-400 hover:bg-blue-500 dark:hover:bg-blue-500 text-white dark:text-gray-900 font-semibold py-2 px-8 rounded-full w-1/2 md:w-full">Play Game</button>
                     <div class="mt-5 md:mt-0 flex">
-                        <button onclick="window.open('https://github.com/eugenetangkj/shooting-portals','_blank')" class="bg-transparent text-blue-500 text-lg hover:underline font-semibold py-2 px-4 rounded-full mr-5">GitHub</button>
-                        <button onclick="window.open('https://drive.google.com/file/d/11h6WRXqXDVpQG3aI2ndPNVduVhvQHkQb/view?usp=sharing','_blank')" class="bg-transparent text-blue-500 text-lg hover:underline font-semibold py-2 px-4 rounded-full mr-5">Report</button>
-                        <button onclick="window.open('https://drive.google.com/file/d/1MleumkdFqX2PaIDkdod2K9Xsbv8X6CP_/view?usp=sharing','_blank')" class="bg-transparent text-blue-500 text-lg hover:underline font-semibold py-2 px-4 rounded-full mr-5">Video</button>
+                        <button onclick="window.open('https://github.com/eugenetangkj/shooting-portals','_blank')" class="bg-transparent text-blue-500 dark:text-blue-400 text-lg hover:underline font-semibold py-2 px-4 rounded-full mr-5">GitHub</button>
+                        <button onclick="window.open('https://drive.google.com/file/d/11h6WRXqXDVpQG3aI2ndPNVduVhvQHkQb/view?usp=sharing','_blank')" class="bg-transparent text-blue-500 dark:text-blue-400 text-lg hover:underline font-semibold py-2 px-4 rounded-full mr-5">Report</button>
+                        <button onclick="window.open('https://drive.google.com/file/d/1MleumkdFqX2PaIDkdod2K9Xsbv8X6CP_/view?usp=sharing','_blank')" class="bg-transparent text-blue-500 dark:text-blue-400 text-lg hover:underline font-semibold py-2 px-4 rounded-full mr-5">Video</button>
                     </div>
                 </div>
             </div>
@@ -247,15 +242,15 @@
  
              <!-- Project Information--> 
              <div class="flex flex-col items-center lg:items-start justify-center text-center lg:text-start lg:justify-start gap-6 lg:w-4/5 lg:col-span-6 lg:order-first">
-                 <h2 class="font-semibold mt-16 lg:mt-0 text-4xl md:text-5xl">neatnotes</h2>
-                 <h2 class="text-xl text-center lg:text-start w-3/4 md:w-4/5 lg:w-full md:text-2xl lg-text-2xl">Seamless note-taking, right at your fingertips.</h2>
-                 <h4 class="text-blue-600 md:text-xl lg:text-start">Flutter, Firebase, Figma</h4>
-                 <p class="text-md w-5/6 lg:w-full md:text-lg mt-2 text-center lg:text-left">neatnotes is a notes-taking Android mobile application that is designed for users to easily create and manage their notes on the go. It has a simplistic yet functional interface, providing features such as user authentication (email and Google sign-in), notes-taking and PDF generation.</p>
+                 <h2 class="font-semibold mt-16 lg:mt-0 text-4xl md:text-5xl dark:text-white">neatnotes</h2>
+                 <h2 class="text-xl text-center lg:text-start w-3/4 md:w-4/5 lg:w-full md:text-2xl lg-text-2xl dark:text-white">Seamless note-taking, right at your fingertips.</h2>
+                 <h4 class="text-blue-600 dark:text-blue-400 md:text-xl lg:text-start">Flutter, Firebase, Figma</h4>
+                 <p class="text-md w-5/6 lg:w-full md:text-lg mt-2 text-center lg:text-left dark:text-white">neatnotes is a notes-taking Android mobile application that is designed for users to easily create and manage their notes on the go. It has a simplistic yet functional interface, providing features such as user authentication (email and Google sign-in), notes-taking and PDF generation.</p>
                  <div class="flex flex-col items-center md:flex-row md:items-start justify-center lg:justify-start space-x-5 sm:w-3/4 md:w-auto mt-5">
-                     <button onclick="window.open('https://github.com/eugenetangkj/neatnotes','_blank')" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 px-8 rounded-full w-1/2 md:w-full">GitHub</button>
+                     <button onclick="window.open('https://github.com/eugenetangkj/neatnotes','_blank')" class="bg-blue-600 dark:bg-blue-400 hover:bg-blue-500 dark:hover:bg-blue-500 text-white dark:text-gray-900 font-semibold py-2 px-8 rounded-full w-1/2 md:w-full">GitHub</button>
                      <div class="mt-5 md:mt-0 flex">
-                        <button onclick="window.open('https://www.figma.com/file/PPykJwYKVNBqVYFTJwzMPw/NeatNotes?type=design&node-id=0%3A1&t=9VcbUMcaPIIuP8sx-1','_blank')" class="bg-transparent text-blue-500 text-lg hover:underline font-semibold py-2 px-5 rounded-full mr-5">Figma</button>
-                        <button onclick="window.open('https://www.youtube.com/watch?v=PKrr3AFPh2I','_blank')" class="bg-transparent text-blue-500 text-lg hover:underline font-semibold py-2 px-4 rounded-full mr-5">Video</button>
+                        <button onclick="window.open('https://www.figma.com/file/PPykJwYKVNBqVYFTJwzMPw/NeatNotes?type=design&node-id=0%3A1&t=9VcbUMcaPIIuP8sx-1','_blank')" class="bg-transparent text-blue-500 dark:text-blue-400 text-lg hover:underline font-semibold py-2 px-5 rounded-full mr-5">Figma</button>
+                        <button onclick="window.open('https://www.youtube.com/watch?v=PKrr3AFPh2I','_blank')" class="bg-transparent text-blue-500 dark:text-blue-400 text-lg hover:underline font-semibold py-2 px-4 rounded-full mr-5">Video</button>
                      </div>
                 </div>
              </div>
@@ -271,108 +266,108 @@
  
              <!-- Project Information--> 
              <div class="flex flex-col items-center lg:items-start justify-center text-center lg:text-start lg:justify-start gap-6 lg:w-4/5 lg:col-span-6">
-                 <h2 class="font-semibold mt-16 lg:mt-0 text-4xl md:text-5xl">ShareCar</h2>
-                 <h2 class="text-xl text-center lg:text-start w-3/4 md:w-4/5 lg:w-full md:text-2xl lg-text-2xl">Sharing cars, has never been easier.</h2>
-                 <h4 class="w-3/4 md:w-full text-blue-600 md:text-xl lg:text-start">Contextual Inquiries, User Journey Maps, Wireframing, Figma, Heuristic Evaluation</h4>
-                 <p class="text-md w-5/6 lg:w-full md:text-lg mt-2 text-center lg:text-left">ShareCar is a car sharing mobile application UX design project. It connects car owners with potential customers while protecting the interests of both parties. For example, a rating system is implemented to help customers avoid errant owners, and a reward mechanism incentivises customers to take good care of the cars during the transaction.</p>
+                 <h2 class="font-semibold mt-16 lg:mt-0 text-4xl md:text-5xl dark:text-white">ShareCar</h2>
+                 <h2 class="text-xl text-center lg:text-start w-3/4 md:w-4/5 lg:w-full md:text-2xl lg-text-2xl dark:text-white">Sharing cars, has never been easier.</h2>
+                 <h4 class="w-3/4 md:w-full text-blue-600 md:text-xl lg:text-start dark:text-blue-400">Contextual Inquiries, User Journey Maps, Wireframing, Figma, Heuristic Evaluation</h4>
+                 <p class="text-md w-5/6 lg:w-full md:text-lg mt-2 text-center lg:text-left dark:text-white">ShareCar is a car sharing mobile application UX design project. It connects car owners with potential customers while protecting the interests of both parties. For example, a rating system is implemented to help customers avoid errant owners, and a reward mechanism incentivises customers to take good care of the cars during the transaction.</p>
                  <div class="flex-row items-start justify-center lg:justify-start space-x-5 sm:w-3/4 md:w-auto mt-5">
-                    <button onclick="window.open('https://www.figma.com/proto/Z5NYAwaHV62sMLTeLvrIdv/ShareCar?page-id=0%3A1&node-id=1%3A2&starting-point-node-id=1%3A2&scaling=scale-down','_blank')" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 px-8 rounded-full">Figma</button>
-                    <button onclick="window.open('https://drive.google.com/file/d/1UBxyh1g8bX6E4rND1yOop-IeGyJmk6fH/view','_blank')" class="bg-transparent text-blue-500 text-lg hover:underline font-semibold py-2 px-4 rounded-full mr-5">Report</button>
+                    <button onclick="window.open('https://www.figma.com/proto/Z5NYAwaHV62sMLTeLvrIdv/ShareCar?page-id=0%3A1&node-id=1%3A2&starting-point-node-id=1%3A2&scaling=scale-down','_blank')" class="bg-blue-600 dark:bg-blue-400 hover:bg-blue-500 dark:hover:bg-blue-500 text-white dark:text-gray-900 font-semibold py-2 px-8 rounded-full">Figma</button>
+                    <button onclick="window.open('https://drive.google.com/file/d/1UBxyh1g8bX6E4rND1yOop-IeGyJmk6fH/view','_blank')" class="bg-transparent text-blue-500 dark:text-blue-400 text-lg hover:underline font-semibold py-2 px-4 rounded-full mr-5">Report</button>
                      </div>
                  </div>
         </div>
 
         <!-- Other projects header -->
         <div>
-            <h5 class="font-semibold text-4xl mt-10">Other Projects</h5>
+            <h5 class="font-semibold text-4xl mt-10 dark:text-white">Other Projects</h5>
         </div>
 
         <div class="mx-auto w-5/6 lg:w-full lg:w-container grid gap-y-10 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 text-start items-stretch">
             <!-- InternBuddy -->
-            <div class="bg-gray-50 p-5 hover:bg-blue-50 duration-500">
-                <h2 class="font-semibold text-3xl mt-5">InternBuddy</h2>
-                <h4 class="text-blue-600 text-lg mt-5 h-12">Java, JavaFX, Jackson, JUnit5, TestFX</h4>
-                <h4 class="text-lg mt-5 sm:h-28 md:h-40 lg:h-28">A desktop application designed for Computing undergraduates to systematically track and manage their internship applications. Available on the Windows, macOS and Linux operating systems.</h4>
+            <div class="bg-gray-50 dark:bg-gray-800 p-5 hover:bg-blue-50 dark:hover:bg-slate-700 duration-500">
+                <h2 class="font-semibold text-3xl mt-5 dark:text-white">InternBuddy</h2>
+                <h4 class="text-blue-600 dark:text-blue-400 text-lg mt-5 h-12">Java, JavaFX, Jackson, JUnit5, TestFX</h4>
+                <h4 class="text-lg mt-5 sm:h-28 md:h-40 lg:h-28 dark:text-white">A desktop application designed for Computing undergraduates to systematically track and manage their internship applications. Available on the Windows, macOS and Linux operating systems.</h4>
                 
                 <div class="flex justify-between items-center mt-6">
                     <div>
-                        <button onclick="window.open('https://github.com/eugenetangkj/internbuddy','_blank')" class="bg-transparent text-blue-500 text-lg hover:underline font-semibold py-2 rounded-full mr-5">GitHub</button>
-                        <button onclick="window.open('https://ay2223s2-cs2103t-t14-3.github.io/tp/','_blank')" class="bg-transparent text-blue-500 text-lg hover:underline font-semibold py-2 rounded-full mr-5">Website</button>
+                        <button onclick="window.open('https://github.com/eugenetangkj/internbuddy','_blank')" class="bg-transparent text-blue-500 dark:text-blue-400 text-lg hover:underline font-semibold py-2 rounded-full mr-5">GitHub</button>
+                        <button onclick="window.open('https://ay2223s2-cs2103t-t14-3.github.io/tp/','_blank')" class="bg-transparent text-blue-500 dark:text-blue-400 text-lg hover:underline font-semibold py-2 rounded-full mr-5">Website</button>
                     </div>
                     <img src="assets/internbuddy-logo.png" class="w-1/6 h-1/16 mr-5" alt="InternBuddy Icon">
                 </div>
             </div>
 
             <!-- mood -->
-            <div class="bg-gray-50 p-5 hover:bg-blue-50 duration-500">
-                <h2 class="font-semibold text-3xl mt-5">mood</h2>
-                <h4 class="text-blue-600 text-lg mt-5 h-12">HTML, CSS, Javascript, Django, SQLite</h4>
-                <h4 class="text-lg mt-5 sm:h-28 md:h-40 lg:h-28">A personal journal web application that allows you to create/edit journal entries, upload images, meditate and view profile information.</h4>
+            <div class="bg-gray-50 dark:bg-gray-800 p-5 hover:bg-blue-50 dark:hover:bg-slate-700 duration-500">
+                <h2 class="font-semibold text-3xl mt-5 dark:text-white">mood</h2>
+                <h4 class="text-blue-600 dark:text-blue-400 text-lg mt-5 h-12">HTML, CSS, Javascript, Django, SQLite</h4>
+                <h4 class="text-lg mt-5 sm:h-28 md:h-40 lg:h-28 dark:text-white">A personal journal web application that allows you to create/edit journal entries, upload images, meditate and view profile information.</h4>
                 
                 <div class="flex justify-between items-center mt-6">
                     <div>
-                        <button onclick="window.open('https://github.com/eugenetangkj/mood','_blank')" class="bg-transparent text-blue-500 text-lg hover:underline font-semibold py-2 rounded-full mr-5">GitHub</button>
-                        <button onclick="window.open('https://youtu.be/1PuJjJNb6qI','_blank')" class="bg-transparent text-blue-500 text-lg hover:underline font-semibold py-2 rounded-full mr-5">Video</button>
+                        <button onclick="window.open('https://github.com/eugenetangkj/mood','_blank')" class="bg-transparent text-blue-500 dark:text-blue-400 text-lg hover:underline font-semibold py-2 rounded-full mr-5">GitHub</button>
+                        <button onclick="window.open('https://youtu.be/1PuJjJNb6qI','_blank')" class="bg-transparent text-blue-500 dark:text-blue-400 text-lg hover:underline font-semibold py-2 rounded-full mr-5">Video</button>
                     </div>
                     <img src="assets/mood-logo.png" class="w-small-12.5 h-1/16 mr-5" alt="mood Icon">
                 </div>
             </div>
 
             <!-- ClosetLogue -->
-            <div class="bg-gray-50 p-5 hover:bg-blue-50 duration-500">
-                <h2 class="font-semibold text-3xl mt-5">ClosetLogue</h2>
-                <h4 class="text-blue-600 text-lg mt-5 h-12">Design Life Cycle, Balsamiq, Figma</h4>
-                <h4 class="text-lg mt-5 sm:h-28 md:h-40 lg:h-28">A mobile UX design project that provides a highly-customised interface to simplify the process of outfit selection for youths, such that dressing well can be hassle and stress-free.</h4>
+            <div class="bg-gray-50 dark:bg-gray-800 p-5 hover:bg-blue-50 dark:hover:bg-slate-700 duration-500">
+                <h2 class="font-semibold text-3xl mt-5 dark:text-white">ClosetLogue</h2>
+                <h4 class="text-blue-600 dark:text-blue-400 text-lg mt-5 h-12">Design Life Cycle, Balsamiq, Figma</h4>
+                <h4 class="text-lg mt-5 sm:h-28 md:h-40 lg:h-28 dark:text-white">A mobile UX design project that provides a highly-customised interface to simplify the process of outfit selection for youths, such that dressing well can be hassle and stress-free.</h4>
                 
                 <div class="flex justify-between items-center mt-6">
                     <div>
-                        <button onclick="window.open('https://www.figma.com/proto/7WIGvjOOmxeFbvQ0J1qBxq?fuid=1047068487571285088','_blank')" class="bg-transparent text-blue-500 text-lg hover:underline font-semibold py-2 rounded-full mr-5">Figma</button>
-                        <button onclick="window.open('https://project0902.wixsite.com/closetlogue','_blank')" class="bg-transparent text-blue-500 text-lg hover:underline font-semibold py-2 rounded-full mr-5">Website</button>
+                        <button onclick="window.open('https://www.figma.com/proto/7WIGvjOOmxeFbvQ0J1qBxq?fuid=1047068487571285088','_blank')" class="bg-transparent text-blue-500 dark:text-blue-400 text-lg hover:underline font-semibold py-2 rounded-full mr-5">Figma</button>
+                        <button onclick="window.open('https://project0902.wixsite.com/closetlogue','_blank')" class="bg-transparent text-blue-500 dark:text-blue-400 text-lg hover:underline font-semibold py-2 rounded-full mr-5">Website</button>
                     </div>
                     <img src="assets/closetlogue-logo.png" class="w-1/6 h-1/16 mr-5" alt="ClosetLogue Icon">    
                 </div>
             </div>
 
             <!-- ET Planet -->
-            <div class="bg-gray-50 p-5 hover:bg-blue-50 duration-500">
-                <h2 class="font-semibold text-3xl mt-5">ET's Planet</h2>
-                <h4 class="text-blue-600 text-lg mt-5 h-12">HTML, CSS, Javascript, SASS</h4>
-                <h4 class="text-lg mt-5 sm:h-28 md:h-40 lg:h-28">My 2022 personal portfolio website, made fully responsive through the usage of vanilla CSS's media queries.</h4>
+            <div class="bg-gray-50 dark:bg-gray-800 p-5 hover:bg-blue-50 dark:hover:bg-slate-700 duration-500">
+                <h2 class="font-semibold text-3xl mt-5 dark:text-white">ET's Planet</h2>
+                <h4 class="text-blue-600 dark:text-blue-400 text-lg mt-5 h-12">HTML, CSS, Javascript, SASS</h4>
+                <h4 class="text-lg mt-5 sm:h-28 md:h-40 lg:h-28 dark:text-white">My 2022 personal portfolio website, made fully responsive through the usage of vanilla CSS's media queries.</h4>
                 
                 <div class="flex justify-between items-center mt-6">
                     <div>
-                        <button onclick="window.open('https://github.com/eugenetangkj/etplanet','_blank')" class="bg-transparent text-blue-500 text-lg hover:underline font-semibold py-2 rounded-full mr-5">GitHub</button>
-                        <button onclick="window.open('https://eugenetangkj.github.io/etplanet/','_blank')" class="bg-transparent text-blue-500 text-lg hover:underline font-semibold py-2 rounded-full mr-5">Website</button>
+                        <button onclick="window.open('https://github.com/eugenetangkj/etplanet','_blank')" class="bg-transparent text-blue-500 dark:text-blue-400 text-lg hover:underline font-semibold py-2 rounded-full mr-5">GitHub</button>
+                        <button onclick="window.open('https://eugenetangkj.github.io/etplanet/','_blank')" class="bg-transparent text-blue-500 dark:text-blue-400 text-lg hover:underline font-semibold py-2 rounded-full mr-5">Website</button>
                     </div>
                     <img src="assets/etplanet-graphic.png" class="w-1/6 h-1/16 mr-5" alt="ET Planet Icon">
                 </div>
             </div>
 
             <!-- BooBot -->
-            <div class="bg-gray-50 p-5 hover:bg-blue-50 duration-500">
-                <h2 class="font-semibold text-3xl mt-5">BooBot</h2>
-                <h4 class="text-blue-600 text-lg mt-5 h-12">Java, JavaFx, JUnit5</h4>
-                <h4 class="text-lg mt-5 sm:h-28 md:h-40 lg:h-28">A text-based GUI task manager application that helps you to keep track of your tasks, saving time and ensuring that you are on track. </h4>
+            <div class="bg-gray-50 dark:bg-gray-800 p-5 hover:bg-blue-50 dark:hover:bg-slate-700 duration-500">
+                <h2 class="font-semibold text-3xl mt-5 dark:text-white">BooBot</h2>
+                <h4 class="text-blue-600 text-lg mt-5 h-12 dark:text-white">Java, JavaFx, JUnit5</h4>
+                <h4 class="text-lg mt-5 sm:h-28 md:h-40 lg:h-28 dark:text-white">A text-based GUI task manager application that helps you to keep track of your tasks, saving time and ensuring that you are on track. </h4>
                 
                 <div class="flex justify-between items-center mt-6">
                     <div>
-                        <button onclick="window.open('https://github.com/eugenetangkj/boobot','_blank')" class="bg-transparent text-blue-500 text-lg hover:underline font-semibold py-2 rounded-full mr-5">GitHub</button>
-                        <button onclick="window.open('https://eugenetangkj.github.io/boobot/','_blank')" class="bg-transparent text-blue-500 text-lg hover:underline font-semibold py-2 rounded-full mr-5">Website</button>
+                        <button onclick="window.open('https://github.com/eugenetangkj/boobot','_blank')" class="bg-transparent text-blue-500 dark:text-blue-400 text-lg hover:underline font-semibold py-2 rounded-full mr-5">GitHub</button>
+                        <button onclick="window.open('https://eugenetangkj.github.io/boobot/','_blank')" class="bg-transparent text-blue-500 dark:text-blue-400 text-lg hover:underline font-semibold py-2 rounded-full mr-5">Website</button>
                     </div>
                     <img src="assets/boobot-graphic.png" class="w-1/6 h-1/16 mr-5" alt="BooBot Icon">
                 </div>
             </div>
 
             <!-- Multiplication Mania -->
-            <div class="bg-gray-50 p-5 hover:bg-blue-50 duration-500">
-                <h2 class="font-semibold text-3xl mt-5">Multiplication Mania</h2>
-                <h4 class="text-blue-600 text-lg mt-5 h-12">HTML, CSS, React</h4>
-                <h4 class="text-lg mt-5 sm:h-28 md:h-40 lg:h-28">A simple multiplication game hosted on the web, where players have to correctly answer 10 questions to obtain the Multiplication Crystal, a proof that one is good in multiplication.</h4>
+            <div class="bg-gray-50 dark:bg-gray-800 p-5 hover:bg-blue-50 dark:hover:bg-slate-700 duration-500">
+                <h2 class="font-semibold text-3xl mt-5 dark:text-white">Multiplication Mania</h2>
+                <h4 class="text-blue-600 dark:text-blue-400 text-lg mt-5 h-12">HTML, CSS, React</h4>
+                <h4 class="text-lg mt-5 sm:h-28 md:h-40 lg:h-28 dark:text-white">A simple multiplication game hosted on the web, where players have to correctly answer 10 questions to obtain the Multiplication Crystal, a proof that one is good in multiplication.</h4>
                 
                 <div class="flex justify-between items-center mt-6">
                     <div>
-                        <button onclick="window.open('https://github.com/eugenetangkj/multiplication-mania','_blank')" class="bg-transparent text-blue-500 text-lg hover:underline font-semibold py-2 rounded-full mr-5">GitHub</button>
-                        <button onclick="window.open('https://nimble-treacle-5e16eb.netlify.app/','_blank')" class="bg-transparent text-blue-500 text-lg hover:underline font-semibold py-2 rounded-full mr-5">Website</button>
+                        <button onclick="window.open('https://github.com/eugenetangkj/multiplication-mania','_blank')" class="bg-transparent text-blue-500 dark:text-blue-400 text-lg hover:underline font-semibold py-2 rounded-full mr-5">GitHub</button>
+                        <button onclick="window.open('https://nimble-treacle-5e16eb.netlify.app/','_blank')" class="bg-transparent text-blue-500 dark:text-blue-400 text-lg hover:underline font-semibold py-2 rounded-full mr-5">Website</button>
                     </div>
                     <img src="assets/multiplication-crystal-logo.png" class="w-small-12.5 h-1/16 mr-5" alt="Multiplication Crystal Icon">
                 </div>
@@ -385,35 +380,23 @@
 
 
     <!-- Get In Touch section -->
-    <div class="container w-3/4 mx-auto flex flex-col py-16 md:py-20 space-y-20 justify-center items-center">
+    <div id="contact-section" class="container w-3/4 mx-auto flex flex-col py-16 md:py-20 space-y-20 justify-center items-center">
         <!-- Get in Touch  -->
         <div class="flex flex-col gap-4 justify-center items-center">
-            <h1 class="font-semibold text-blue-600 text-2xl text-center">Contact</h1>
-            <h1 class="font-semibold text-3xl md:text-4xl text-center">Let's get in touch.</h1>
-            <p class="text-lg md:text-xl mt-5 text-center">I am constantly looking for opportunities to design and build impactful products. Whether you wish to collaborate with me or simply to say hello, feel free to leave me a message.
+            <h1 class="font-semibold text-blue-600 text-2xl text-center dark:text-blue-400">Contact</h1>
+            <h1 class="font-semibold text-3xl md:text-4xl text-center dark:text-white">Let's get in touch.</h1>
+            <p class="text-lg md:text-xl mt-5 text-center dark:text-white">I am constantly looking for opportunities to design and build impactful products. Whether you wish to collaborate with me or simply to say hello, feel free to leave me a message.
             </p>
-            <button onclick="window.open('mailto:eugenetangkangjie@gmail.com','_blank')" class="mt-5 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 px-8 rounded-full w-auto">Say Hi</button>
+            <button onclick="window.open('mailto:eugenetangkangjie@gmail.com','_blank')" class="mt-5 bg-blue-600 dark:bg-blue-400 hover:bg-blue-500 dark:hover:bg-blue-500 text-white font-semibold py-2 px-8 rounded-full w-auto">Say Hi</button>
         </div>
 
         <!-- Social links -->
         <div class="flex items-center gap-x-10">
-            <a href="https://github.com/eugenetangkj" target="_blank"><ion-icon name="logo-github" class="text-[40px] text-gray-400 hover:text-blue-600 duration-500 cursor-pointer"></ion-icon></a>
-            <a href="https://www.linkedin.com/in/eugene-tang-kang-jie/" target="_blank"><ion-icon name="logo-linkedin" class="text-[40px] text-gray-400 hover:text-blue-600 duration-500 cursor-pointer"></ion-icon></a>
-            <a href="https://dribbble.com/eugenetang_kj" target="_blank"><ion-icon name="logo-dribbble" class="text-[40px] text-gray-400 hover:text-blue-600 duration-500 cursor-pointer"></ion-icon></a>
+            <a href="https://github.com/eugenetangkj" target="_blank"><ion-icon name="logo-github" class="text-[40px] text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 duration-500 cursor-pointer"></ion-icon></a>
+            <a href="https://www.linkedin.com/in/eugene-tang-kang-jie/" target="_blank"><ion-icon name="logo-linkedin" class="text-[40px] text-gray-400 dark:hover:text-blue-400 hover:text-blue-600 duration-500 cursor-pointer"></ion-icon></a>
+            <a href="https://dribbble.com/eugenetang_kj" target="_blank"><ion-icon name="logo-dribbble" class="text-[40px] text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 duration-500 cursor-pointer"></ion-icon></a>
         </div>
-
-  
-
-
-
-           
-
-
-          
-
-
-
-
+    </div>
 
 
     <!-- Javascript files -->
