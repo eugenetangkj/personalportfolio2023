@@ -1,1 +1,2 @@
-# personalportfolio2023
+# Personal Portfolio 2023
+This is my personal portfolio website for 2023. It is fully responsive where it is built using Tailwind CSS and some Javascript as well. For this website, I strived for a simplistic and clean design. Hope you would enjoy browsing through it, and feel free to say hello! 👋
