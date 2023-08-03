@@ -944,6 +944,25 @@ video {
   transition-duration: 500ms;
 }
 
+/* width */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 5px;
+}
+
 @media (min-width: 768px) {
   .md\:container {
     width: 100%;
