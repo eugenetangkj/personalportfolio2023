@@ -10,7 +10,7 @@
 </head> 
 <body class="roboto dark:bg-slate-950">
     <!-- Nav bar -->
-    <nav class="bg-slate-100 w-full z-10 h-small-10 fixed duration-500 dark:bg-gray-900" id="navbar">
+    <nav class="bg-white w-full z-10 h-small-10 fixed duration-500 dark:bg-slate-950" id="navbar">
         <div class="mx-5 md:container md:mx-auto md:w-large-90 py-5 flex items-center justify-between">
             <!-- Logo -->
             <a href='#home-section'><span class="text-xl font-semibold text-black dark:text-white">Eugene Tang</span></a>
@@ -45,7 +45,7 @@
             </div>
 
             <!-- Items within hamburger menu -->
-            <div id="hamburger-menu-items" class="flex flex-col justify-center items-center bg-slate-200 dark:bg-black absolute left-0 top-0 w-0 h-[100vh] text-black dark:text-white font-semibold z-20 text-2xl duration-500 text-center overflow-hidden">
+            <div id="hamburger-menu-items" class="flex flex-col justify-center items-center bg-slate-200 dark:bg-black absolute left-0 top-0 w-0 h-[100vh] text-black dark:text-white font-semibold z-30 text-2xl duration-500 text-center overflow-hidden">
                 <ul id="hamburger-menu-ul" class="space-y-10">
                     <!-- <li class="hover:text-blue-400 duration-400">
                         <a href="#home-section" onclick="closeMenu()" class="hover:text-blue-600 dark:hover:text-blue-400 duration-500">Home</a>
@@ -76,14 +76,23 @@
     </nav>
 
     <!-- Intro section-->
-    <div id="home-section" class="bg-slate-100 dark:bg-gray-900 flex flex-col items-center justify-center mx-auto" style="height: 100vh">
+    <div id="home-section" class="dark:bg-slate-950 flex flex-col items-center justify-center mx-auto" style="height: 100vh">
+        <!-- Animated bubbles -->
+        <div class="absolute top-0 -ml-large-60 md:-ml-large-70 lg:-ml-large-90 w-36 h-36 bg-purple-100 dark:bg-purple-950 rounded-full blur-xl first-letter:opacity-70 animate-blobfast"></div>
+        <div class="absolute top-0 -ml-small-30 md:-ml-large-60 w-36 h-36 bg-blue-100 dark:bg-blue-950 rounded-full blur-xl opacity-70 animate-blob"></div>
+        <div class="absolute top-0 -mr-large-70 md:-mr-large-80 w-36 h-36 bg-pink-100 dark:bg-pink-950 rounded-full blur-xl opacity-70 animate-blobmedium"></div>
+        <div class="absolute top-0 -mr-small-40 md:-mr-large-50 w-36 h-36 bg-cyan-100 dark:bg-cyan-950 rounded-full blur-xl opacity-70 animate-blobfast"></div>
+
+
+        
         <!-- Normal Text-->
-        <h1 class="text-black dark:text-white font-semibold text-3xl sm:text-4xl md:text-6xl mx-auto">Hi, I am Eugene!</h1>
+        <h1 id="intro-header" class="text-black dark:text-white font-semibold text-3xl sm:text-4xl md:text-6xl mx-auto z-10">Hi, I am Eugene!</h1>
             
         <!-- Animated Text -->
-        <div class="mt-10 md:mt-20 mx-auto">
+        <div id="intro-subheader" class="mt-10 md:mt-20 mx-auto z-10">
             <p class="text-2xl sm:text-2xl md:text-5xl mx-auto dark:text-white">An aspiring <span id="text" class="text-blue-600 dark:text-blue-400"></span></p>  
         </div>
+        
     </div>
     
 
@@ -93,7 +102,7 @@
         <div class="flex flex-col gap-4 justify-center items-center">
             <h1 class="font-semibold text-blue-600 dark:text-blue-400 text-2xl text-center">About Me</h1>
             <h1 class="font-semibold text-3xl md:text-4xl text-center dark:text-white">I build user-centric, visually-appealing digital products.</h1>
-            <p class="text-md md:text-xl mt-5 text-center dark:text-white">Greetings! I'm Eugene, a second-year undergraduate studying Computer Science at the National University of Singapore. As an aspiring software engineer, I am driven by my genuine passion for creating user-centric products. With a strong belief in the significance of user experience, I am committed to delivering exceptional digital experiences.
+            <p class="text-md md:text-xl mt-5 text-center text-gray-500 dark:text-gray-400">Greetings! I'm Eugene, a second-year undergraduate studying Computer Science at the National University of Singapore. As an aspiring software engineer, I am driven by my genuine passion for creating user-centric products. With a strong belief in the significance of user experience, I am committed to delivering exceptional digital experiences.
             </p> 
         </div>
 
@@ -101,75 +110,7 @@
             <img src="assets/portrait-circular.png" alt="Personal Portrait">
         </div>
 
-        <!-- Core Values -->
-        <!-- <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4 text-center lg:w-2/3 items-center">
-            <div class="bg-gray-50 rounded-2xl p-5">
-                <h2 class="font-semibold text-2xl">My Guiding Philosophy</h2>
-                <p class="mt-5">I firmly believe that technology is a powerful tool that has the potential to greatly improve people's lives. I want to leverage the power of technology, seeking innovative solutions to solve real world problems.</p>      
-            </div>
-
-            <div class="bg-gray-50 mt-10 rounded-2xl p-5 md:mt-0">
-                <h2 class="font-semibold text-2xl">The Pursuit of Perfection</h2>
-                <p class="mt-5">I strive to give my best in everything that I do, having a keen eye for details. With ever-changing trends, I am constantly keeping abreast with the latest developments of technology and UX design.</p>   
-            </div>
-
-        </div> -->
     </div>
-
-    <!-- Skills section -->
-    <!-- <div class="container w-3/4 md:w-3/4 lg:w-full mx-auto flex flex-col py-16 md:py-20 space-y-20 justify-center items-center"> -->
-        <!-- Skills Information-->
-        <!-- <div class="flex flex-col gap-4 justify-center items-center">
-            <h1 class="font-semibold text-blue-600 text-2xl text-center">Skills</h1>
-            <h1 class="font-semibold text-3xl md:text-4xl text-center">My toolkit is full of tech and design tools.</h1>
-        </div> -->
-
-        <!-- Skills list -->
-        <!-- <div class="grid gap-y-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:gap-4 text-center lg:w-2/3 items-stretch"> -->
-            <!-- Web -->
-            <!-- <div class="bg-gray-50 rounded-2xl p-5">
-                <ion-icon name="globe-outline" class="text-[40px] text-gray-400"></ion-icon>
-                <h2 class="font-semibold text-2xl mt-5">Web</h2>
-                <p class="mt-5">HTML, CSS, Javascript, Django, PHP Laravel, SASS, Tailwind, Bootstrap</p>      
-            </div> -->
-
-            <!-- App -->
-            <!-- <div class="bg-gray-50 rounded-2xl p-5">
-                <ion-icon name="phone-portrait-outline" class="text-[40px] text-gray-400"></ion-icon>
-                <h2 class="font-semibold text-2xl mt-5">App</h2>
-                <p class="mt-5">Java, C, Flutter</p>      
-            </div> -->
-
-            <!-- Game -->
-            <!-- <div class="bg-gray-50 rounded-2xl p-5">
-                <ion-icon name="game-controller-outline" class="text-[40px] text-gray-400"></ion-icon>
-                <h2 class="font-semibold text-2xl mt-5">Game</h2>
-                <p class="mt-5">Unity, Micrsoft Azure Playfab</p>      
-            </div> -->
-
-            <!-- Backend -->
-            <!-- <div class="bg-gray-50 rounded-2xl p-5">
-                <ion-icon name="cube-outline" class="text-[40px] text-gray-400"></ion-icon>
-                <h2 class="font-semibold text-2xl mt-5">Database</h2>
-                <p class="mt-5">SQL, MySQL, SQLite, Firebase</p>      
-            </div> -->
-
-            <!-- AI/ML -->
-            <!-- <div class="bg-gray-50 rounded-2xl p-5">
-                <ion-icon name="analytics-outline" class="text-[40px] text-gray-400"></ion-icon>
-                <h2 class="font-semibold text-2xl mt-5">AI & ML</h2>
-                <p class="mt-5">Python, NumPy, Pandas, Sklearn, Pytorch</p>      
-            </div> -->
-
-            <!-- Design -->
-            <!-- <div class="bg-gray-50 rounded-2xl p-5">
-                <ion-icon name="eyedrop-outline" class="text-[40px] text-gray-400"></ion-icon>
-                <h2 class="font-semibold text-2xl mt-5">Design</h2>
-                <p class="mt-5">Figma, Balsamiq, Adobe Fresco</p>      
-            </div>
-        </div> -->
-
-    <!-- </div> -->
 
     <!-- Work Experience section -->
     <div id="experience-section" class="container w-3/4 mx-auto flex flex-col py-16 md:py-20 space-y-20 justify-center items-center">
@@ -184,7 +125,7 @@
             <h3 class="text-gray-400 dark:text-gray-100 text-lg text-left">May 2023 - August 2023 </h3>
             <h3 class="font-semibold text-3xl md:text-2xl text-left dark:text-white">Information Technology Intern @ CBM Pte Ltd</h3>
             <h4 class="text-blue-600 dark:text-blue-400 text-left">Flutter, PHP Laravel, Voyager, HTML, CSS, Javascript, jQuery, MySQL, Figma</h4>
-            <p class="text-md md:text-lg mt-2 text-left dark:text-white">During my internship, I developed a full stack project management system to automate report generation. This involved creating a hi-fidelity mobile app prototype using Figma and implementing it with Flutter. Additionally, I contributed to the web admin dashboard, designing custom web pages for better information access with HTML, CSS, and Javascript. Finally, I built APIs using PHP Laravel to connect the web pages and mobile app to our MySQL database.</p> 
+            <p class="text-md md:text-lg mt-2 text-left text-gray-500 dark:text-gray-400">During my internship, I developed a full stack project management system to automate report generation. This involved creating a hi-fidelity mobile app prototype using Figma and implementing it with Flutter. Additionally, I contributed to the web admin dashboard, designing custom web pages for better information access with HTML, CSS, and Javascript. Finally, I built APIs using PHP Laravel to connect the web pages and mobile app to our MySQL database.</p> 
             <div class="flex flex-col w-full items-center md:flex-row md:items-start justify-center lg:justify-start space-x-5 md:w-auto mt-5">
                 <button onclick="window.open('https://drive.google.com/file/d/1awi9NmlJ8ZaFE7Di56H9CYcwKETXslpE/view?usp=sharing','_blank')" class="bg-blue-600 dark:bg-blue-400 hover:bg-blue-500 dark:hover:bg-blue-500 text-white dark:text-gray-900 font-semibold py-2 px-8 rounded-full w-1/2 md:w-1/2 duration-500">Video</button>
                 <div class="mt-5 md:mt-0 flex">
@@ -202,7 +143,7 @@
             <h3 class="text-gray-400 dark:text-gray-100 text-lg text-left">May 2023 - August 2023 </h3>
             <h3 class="font-semibold text-3xl md:text-2xl text-left dark:text-white">Advisor for NUS CP2106 (Orbital)</h3>
             <h4 class="text-blue-600 dark:text-blue-400 text-left">Unity, Software Engineering</h4>
-            <p class="text-md md:text-lg mt-2 text-left dark:text-white">I mentored and provided technical expertise to 11 teams of Year 1 undergraduates throughout a 3-month software engineering project. My main areas of guidance were Unity and essential software engineering principles, including version control and software design.</p> 
+            <p class="text-md md:text-lg mt-2 text-left text-gray-500 dark:text-gray-400">I mentored and provided technical expertise to 11 teams of Year 1 undergraduates throughout a 3-month software engineering project. My main areas of guidance were Unity and essential software engineering principles, including version control and software design.</p> 
         </div>
 
 
@@ -232,7 +173,7 @@
                 <h2 class="font-semibold mt-16 lg:mt-0 text-4xl md:text-5xl dark:text-white">Shooting Portals</h2>
                 <h2 class="text-xl text-center lg:text-start w-3/4 md:w-4/5 lg:w-full md:text-2xl lg-text-2xl dark:text-white">Embark on a multi-galaxy journey, and survive using portal technology.</h2>
                 <h4 class="text-blue-600 md:text-xl lg:text-start dark:text-blue-400">Unity, Microsoft Azure Playfab</h4>
-                <p class="text-md w-5/6 lg:w-full md:text-lg mt-2 text-center lg:text-left dark:text-white">Shooting Portals is a PC 2D puzzle-based platformer designed for youths in the age range of 13-25. The game revolves around Pulse, an inventor residing in the Portal Galaxy. His dog, Orbit, accidentally entered into an unknown galaxy. Hence, it is up to you to rescue Orbit. Utilise Pulse's portal-based mechanics to your advantage, and survive through 10 levels filled with menacing beasts.</p>
+                <p class="text-md w-5/6 lg:w-full md:text-lg mt-2 text-center lg:text-left text-gray-500 dark:text-gray-400">Shooting Portals is a PC 2D puzzle-based platformer designed for youths in the age range of 13-25. The game revolves around Pulse, an inventor residing in the Portal Galaxy. His dog, Orbit, accidentally entered into an unknown galaxy. Hence, it is up to you to rescue Orbit. Utilise Pulse's portal-based mechanics to your advantage, and survive through 10 levels filled with menacing beasts.</p>
                 <div class="flex flex-col items-center md:flex-row md:items-start justify-center lg:justify-start space-x-5 sm:w-3/4 md:w-auto mt-5">
                     <button onclick="window.open('https://play.unity.com/mg/other/webgl-builds-200053','_blank')" class="bg-blue-600 dark:bg-blue-400 hover:bg-blue-500 dark:hover:bg-blue-500 text-white dark:text-gray-900 font-semibold py-2 px-8 rounded-full w-1/2 md:w-full duration-500">Play Game</button>
                     <div class="mt-5 md:mt-0 flex">
@@ -256,7 +197,7 @@
                  <h2 class="font-semibold mt-16 lg:mt-0 text-4xl md:text-5xl dark:text-white">neatnotes</h2>
                  <h2 class="text-xl text-center lg:text-start w-3/4 md:w-4/5 lg:w-full md:text-2xl lg-text-2xl dark:text-white">Seamless note-taking, right at your fingertips.</h2>
                  <h4 class="text-blue-600 dark:text-blue-400 md:text-xl lg:text-start">Flutter, Firebase, Figma</h4>
-                 <p class="text-md w-5/6 lg:w-full md:text-lg mt-2 text-center lg:text-left dark:text-white">neatnotes is a notes-taking Android mobile application that is designed for users to easily create and manage their notes on the go. It has a simplistic yet functional interface, providing features such as user authentication (email and Google sign-in), notes-taking and PDF generation.</p>
+                 <p class="text-md w-5/6 lg:w-full md:text-lg mt-2 text-center lg:text-left text-gray-500 dark:text-gray-400">neatnotes is a notes-taking Android mobile application that is designed for users to easily create and manage their notes on the go. It has a simplistic yet functional interface, providing features such as user authentication (email and Google sign-in), notes-taking and PDF generation.</p>
                  <div class="flex flex-col items-center md:flex-row md:items-start justify-center lg:justify-start space-x-5 sm:w-3/4 md:w-auto mt-5">
                      <button onclick="window.open('https://github.com/eugenetangkj/neatnotes','_blank')" class="bg-blue-600 dark:bg-blue-400 hover:bg-blue-500 dark:hover:bg-blue-500 text-white dark:text-gray-900 font-semibold py-2 px-8 rounded-full w-1/2 md:w-full duration-500">GitHub</button>
                      <div class="mt-5 md:mt-0 flex">
@@ -280,7 +221,7 @@
                  <h2 class="font-semibold mt-16 lg:mt-0 text-4xl md:text-5xl dark:text-white">ShareCar</h2>
                  <h2 class="text-xl text-center lg:text-start w-3/4 md:w-4/5 lg:w-full md:text-2xl lg-text-2xl dark:text-white">Sharing cars, has never been easier.</h2>
                  <h4 class="w-3/4 md:w-full text-blue-600 md:text-xl lg:text-start dark:text-blue-400">Contextual Inquiries, User Journey Maps, Wireframing, Figma, Heuristic Evaluation</h4>
-                 <p class="text-md w-5/6 lg:w-full md:text-lg mt-2 text-center lg:text-left dark:text-white">ShareCar is a car sharing mobile application UX design project. It connects car owners with potential customers while protecting the interests of both parties. For example, a rating system is implemented to help customers avoid errant owners, and a reward mechanism incentivises customers to take good care of the cars during the transaction.</p>
+                 <p class="text-md w-5/6 lg:w-full md:text-lg mt-2 text-center lg:text-left text-gray-500 dark:text-gray-400">ShareCar is a car sharing mobile application UX design project. It connects car owners with potential customers while protecting the interests of both parties. For example, a rating system is implemented to help customers avoid errant owners, and a reward mechanism incentivises customers to take good care of the cars during the transaction.</p>
                  <div class="flex-row items-start justify-center lg:justify-start space-x-5 sm:w-3/4 md:w-auto mt-5">
                     <button onclick="window.open('https://www.figma.com/proto/Z5NYAwaHV62sMLTeLvrIdv/ShareCar?page-id=0%3A1&node-id=1%3A2&starting-point-node-id=1%3A2&scaling=scale-down','_blank')" class="bg-blue-600 dark:bg-blue-400 hover:bg-blue-500 dark:hover:bg-blue-500 text-white dark:text-gray-900 font-semibold py-2 px-8 rounded-full duration-500">Figma</button>
                     <button onclick="window.open('https://drive.google.com/file/d/1UBxyh1g8bX6E4rND1yOop-IeGyJmk6fH/view','_blank')" class="bg-transparent text-blue-500 dark:text-blue-400 text-lg hover:underline font-semibold py-2 px-4 rounded-full mr-5">Report</button>
@@ -298,7 +239,7 @@
             <div class="bg-gray-50 dark:bg-gray-800 p-5 hover:bg-blue-50 dark:hover:bg-slate-700 duration-500">
                 <h2 class="font-semibold text-3xl mt-5 dark:text-white">InternBuddy</h2>
                 <h4 class="text-blue-600 dark:text-blue-400 text-lg mt-5 h-12">Java, JavaFX, Jackson, JUnit5, TestFX</h4>
-                <h4 class="text-lg mt-5 sm:h-28 md:h-40 lg:h-28 dark:text-white">A desktop application designed for Computing undergraduates to systematically track and manage their internship applications. Available on the Windows, macOS and Linux operating systems.</h4>
+                <h4 class="text-lg mt-5 sm:h-28 md:h-40 lg:h-28 text-gray-500 dark:text-gray-400">A desktop application designed for Computing undergraduates to systematically track and manage their internship applications. Available on the Windows, macOS and Linux operating systems.</h4>
                 
                 <div class="flex justify-between items-center mt-6">
                     <div>
@@ -313,7 +254,7 @@
             <div class="bg-gray-50 dark:bg-gray-800 p-5 hover:bg-blue-50 dark:hover:bg-slate-700 duration-500">
                 <h2 class="font-semibold text-3xl mt-5 dark:text-white">mood</h2>
                 <h4 class="text-blue-600 dark:text-blue-400 text-lg mt-5 h-12">HTML, CSS, Javascript, Django, SQLite</h4>
-                <h4 class="text-lg mt-5 sm:h-28 md:h-40 lg:h-28 dark:text-white">A personal journal web application that allows you to create/edit journal entries, upload images, meditate and view profile information.</h4>
+                <h4 class="text-lg mt-5 sm:h-28 md:h-40 lg:h-28 text-gray-500 dark:text-gray-400">A personal journal web application that allows you to create/edit journal entries, upload images, meditate and view profile information.</h4>
                 
                 <div class="flex justify-between items-center mt-6">
                     <div>
@@ -328,7 +269,7 @@
             <div class="bg-gray-50 dark:bg-gray-800 p-5 hover:bg-blue-50 dark:hover:bg-slate-700 duration-500">
                 <h2 class="font-semibold text-3xl mt-5 dark:text-white">ClosetLogue</h2>
                 <h4 class="text-blue-600 dark:text-blue-400 text-lg mt-5 h-12">Design Life Cycle, Balsamiq, Figma</h4>
-                <h4 class="text-lg mt-5 sm:h-28 md:h-40 lg:h-28 dark:text-white">A mobile UX design project that provides a highly-customised interface to simplify the process of outfit selection for youths, such that dressing well can be hassle and stress-free.</h4>
+                <h4 class="text-lg mt-5 sm:h-28 md:h-40 lg:h-28 text-gray-500 dark:text-gray-400">A mobile UX design project that provides a highly-customised interface to simplify the process of outfit selection for youths, such that dressing well can be hassle and stress-free.</h4>
                 
                 <div class="flex justify-between items-center mt-6">
                     <div>
@@ -343,7 +284,7 @@
             <div class="bg-gray-50 dark:bg-gray-800 p-5 hover:bg-blue-50 dark:hover:bg-slate-700 duration-500">
                 <h2 class="font-semibold text-3xl mt-5 dark:text-white">ET's Planet</h2>
                 <h4 class="text-blue-600 dark:text-blue-400 text-lg mt-5 h-12">HTML, CSS, Javascript, SASS</h4>
-                <h4 class="text-lg mt-5 sm:h-28 md:h-40 lg:h-28 dark:text-white">My 2022 personal portfolio website, made fully responsive through the usage of vanilla CSS's media queries.</h4>
+                <h4 class="text-lg mt-5 sm:h-28 md:h-40 lg:h-28 text-gray-500 dark:text-gray-400">My 2022 personal portfolio website, made fully responsive through the usage of vanilla CSS's media queries.</h4>
                 
                 <div class="flex justify-between items-center mt-6">
                     <div>
@@ -358,7 +299,7 @@
             <div class="bg-gray-50 dark:bg-gray-800 p-5 hover:bg-blue-50 dark:hover:bg-slate-700 duration-500">
                 <h2 class="font-semibold text-3xl mt-5 dark:text-white">BooBot</h2>
                 <h4 class="text-blue-600 dark:text-blue-400 text-lg mt-5 h-12">Java, JavaFx, JUnit5</h4>
-                <h4 class="text-lg mt-5 sm:h-28 md:h-40 lg:h-28 dark:text-white">A text-based GUI task manager application that helps you to keep track of your tasks, saving time and ensuring that you are on track. </h4>
+                <h4 class="text-lg mt-5 sm:h-28 md:h-40 lg:h-28 text-gray-500 dark:text-gray-400">A text-based GUI task manager application that helps you to keep track of your tasks, saving time and ensuring that you are on track. </h4>
                 
                 <div class="flex justify-between items-center mt-6">
                     <div>
@@ -373,7 +314,7 @@
             <div class="bg-gray-50 dark:bg-gray-800 p-5 hover:bg-blue-50 dark:hover:bg-slate-700 duration-500">
                 <h2 class="font-semibold text-3xl mt-5 dark:text-white">Multiplication Mania</h2>
                 <h4 class="text-blue-600 dark:text-blue-400 text-lg mt-5 h-12">HTML, CSS, React</h4>
-                <h4 class="text-lg mt-5 sm:h-28 md:h-40 lg:h-28 dark:text-white">A simple multiplication game hosted on the web, where players have to correctly answer 10 questions to obtain the Multiplication Crystal, a proof that one is good in multiplication.</h4>
+                <h4 class="text-lg mt-5 sm:h-28 md:h-40 lg:h-28 text-gray-500 dark:text-gray-400">A simple multiplication game hosted on the web, where players have to correctly answer 10 questions to obtain the Multiplication Crystal, a proof that one is good in multiplication.</h4>
                 
                 <div class="flex justify-between items-center mt-6">
                     <div>
@@ -396,9 +337,9 @@
         <div class="flex flex-col gap-4 justify-center items-center">
             <h1 class="font-semibold text-blue-600 text-2xl text-center dark:text-blue-400">Contact</h1>
             <h1 class="font-semibold text-3xl md:text-4xl text-center dark:text-white">Let's get in touch.</h1>
-            <p class="text-lg md:text-xl mt-5 text-center dark:text-white">I am constantly looking for opportunities to design and build impactful products. Whether you wish to collaborate with me or simply to say hello, feel free to leave me a message.
+            <p class="text-lg md:text-xl mt-5 text-center text-gray-500 dark:text-gray-400">I am constantly looking for opportunities to design and build impactful products. Whether you wish to collaborate with me or simply to say hello, feel free to leave me a message.
             </p>
-            <button onclick="window.open('mailto:eugenetangkangjie@gmail.com','_blank')" class="mt-5 bg-blue-600 dark:bg-blue-400 hover:bg-blue-500 dark:hover:bg-blue-500 text-white font-semibold py-2 px-8 rounded-full w-auto duration-500">Say Hi</button>
+            <button onclick="window.open('mailto:eugenetangkangjie@gmail.com','_blank')" class="mt-5 bg-blue-600 dark:bg-blue-400 hover:bg-blue-500 dark:hover:bg-blue-500 text-white dark:text-gray-900 font-semibold py-2 px-8 rounded-full w-auto duration-500">Say Hi</button>
         </div>
 
         <!-- Social links -->

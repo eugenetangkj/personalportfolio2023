@@ -2,18 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-/* width */
+/* Vertical Scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
 }
   
-/* Track */
 ::-webkit-scrollbar-track {
     background: transparent;
 }
-  
-/* Handle */
+
 ::-webkit-scrollbar-thumb {
     background: #2563eb;
     border-radius: 5px;
+}
+
+@layer utilities {
+    .animation-delay-1000 {
+        animation-delay: 1s;
+    }
+
+    .animation-delay-1500 {
+        animation-delay: 1.5s;
+    }
+
+    .animation-delay-2000 {
+        animation-delay: 2s;
+    }
+
 }
