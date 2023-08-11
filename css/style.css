@@ -580,10 +580,6 @@ video {
   z-index: 30;
 }
 
-.z-20 {
-  z-index: 20;
-}
-
 .mx-5 {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
@@ -812,8 +808,8 @@ video {
   }
 }
 
-.animate-blobmedium {
-  animation: blob 4.5s linear infinite;
+.animate-blobfaster {
+  animation: blob 3s linear infinite;
 }
 
 @keyframes blob {
@@ -842,8 +838,8 @@ video {
   }
 }
 
-.animate-blobfaster {
-  animation: blob 3s linear infinite;
+.animate-blobmedium {
+  animation: blob 4.5s linear infinite;
 }
 
 .cursor-pointer {
