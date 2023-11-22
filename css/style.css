@@ -714,6 +714,10 @@ video {
   width: 12.5%;
 }
 
+.w-small-10 {
+  width: 10%;
+}
+
 .max-w-lg {
   max-width: 32rem;
 }
